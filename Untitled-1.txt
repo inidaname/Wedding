@@ -1,0 +1,91 @@
+Polarr Full Stack Product Developer Assignment
+The following is a small assignment for Polarr's FullStack Product Developer candidate. The assignment requires understanding of both frontend and backend technologies, namely Javascript (ReactJS), HTML, CSS, WebGL, NodeJS, and should take between 6 and 8 hours complete for the level of skill we're expecting you to have before joining Polarr. All code written during the assignment is owned by you and Polarr doesn't claim any IP or ownership on your code.
+
+Section 1: Javascript Programming (estimate completion time < 30 minutes)
+
+Write a function in Javascript that returns an array of 10 random integers each ranging from 1-10.
+Write another function that takes the output of question 1, and returns the indices of the top 5 values in descending order. If there is a tie for the fifth ranked element, you must return all the indicies where their values are tied with the fifth largest index.
+See example below:
+// 1. sample starter code for question 1
+var randomArraySize10 = function(){
+	// Your code goes here
+	...
+	return outputArray; // sample output could be [7,5,7,7,7,3,6,9,8,7];
+}
+// 2. sample code for question 2
+var getIndicesOfLargestValues = function(input){
+	// Your code goes here
+	...
+	return sortedByValueIndices; // sample output from the example below should be [7,8,0,2,3,4,9]
+}
+
+// A couple more example results for question 1 and question 2
+// 1. [1,1,1,1,1,1,1,1,1,1]     2. [0,1,2,3,4,5,6,7,8,9]
+// 1. [1,1,2,2,3,3,4,4,5,5]     2. [8,9,6,7,4,5]
+3. The following code attempts to run 10 tasks sequentially and have a timeout of 1 second after each task. Given the following piece of code, please identify issues with it, and write a correct implementation for the original intention.
+
+for (int i = 0; i < 10; i++){
+	setTimeout(function(){
+		// Running some asynchronous tasks here
+		// ...
+		console.log("completed task id " + i);
+	}, 1000)
+}
+Section 2: React JS component (estimate completion time < 30 minutes)
+
+Watch the video https://streamable.com/ulyfr , obverve that for all tap and drag events, there is a blue dot ripple showing the event action.
+
+Write a ReactJS component that replicates the touch / drag ripple for Touch as well as Pointer events (meaning it should work both on mobile and desktop devices). Such component should be able to used directly by any ReactJS project. Demostrate the component as well as how to behave on a webpage. You only to make it work in the latest version of Chrome Desktop. Safari support is a bonus.
+
+Section 3: CSS programming (estimate completion time < 30 minutes)
+
+Observe a legal document formatted in HTML and CSS on this page https://i.imgur.com/Dhl8OwP.png , not that the HTML relies on li and ol elements to automatically print the section, sub section, sub section inside sub section on the page. Create the CSS markup that represents the level of indentation from the document. Test your CSS and make sure if works in the same way as the screenshot above shows.
+
+After you succesfully created indentation, add a slider to the page to dynamically adjust the indentation among section / sub section / sub section with in sub sections. The indentation should be the same at different depths of the sections.
+
+Section 4: Node.js and database (estimate completion time < 1 hour 30 minutes)
+
+Your goal is to create a locally hosted backend system and database to record interactions from the ReactJS component you created in Section 2 and then replay the interaction at anytime on a given webpage
+
+The specific requirements are:
+
+Each recording needs to have its own id. You need to design the mechanism of starting the recording and create an id.
+After a recording is created, your backend needs to record the sequence of events into the database. You need to design the schema of the database and store all information in a persistent way.
+A user can open a URL through a GET request to replay the interaction from a recording of a particular id on the same given webpage.
+Note that you can use any persistent data store of your choise (SQL or NoSQL).
+
+Section 5: Automation Testing (estimate completion time < 30 minutes)
+
+Now imagine you're using a system you developed from Section 4 on a webpage with a blue button, where pressing the blue button will make the button turns red, and pressing again will make the button turns yellow, and then again it will turn to red and start over (RED -> BLUE -> YELLOW -> RED -> ...).
+
+First, program such webpage with the button.
+Then extend your system from Section 4 to not only record the interaction on such page, but also the state (color) of the button after all interactions. These states need to be written to your database along with the interactions.
+After an interaction with the button state is recorded, while replaying the interaction on the webpage again, verify that the color still changes in the same way when as originally recorded.
+Create a new webpage test case where the button no longer changes in the expected sequence of color. Replay your interaction on such page, at this point, you should alert the user that the page is no longer behaving as expected compared to when it was first recorded.
+Section 6: Web Sockets (estimate completion time < 1 hour)
+
+From section 5, bullet 4, your alert perhaps was showing up on the webpage including the button itself. This isn't ideal when there might be multiple testing running where some of them are failing and others passing. Create a new webpage acting as the dashboard to display all test failure/success. This page should display each test run and whether the test run resulted in failure or success, as well as explaining why the test failed. The dashboard should immediately receive a successful or failed results from test runs. Use Web Socket to estabilish the communication between the dashboard page and your backend.
+
+Section 7: WebGL Lasso Tool (
+
+The section should take < 1 hour 30 minites for experienced WebGL programmers, and double the amount of time 3 hours for those who're new to WebGL. )
+
+A lasso is a simple regional seleciton method where you can draw an enclosed area with a cursor. See example http://bl.ocks.org/skokenes/511c5b658c405ad68941
+
+Your task is to create a simple photo editing demo webpage where the user can draw a lasso on to brighten up the selected area of a pre-loaded photo. Hint: use Canvas to generate a texture that represents the shape of the selecter area.
+
+If you don't know WebGL, here is a simple crash course that should equip you with all the knowledge for this particular assignment https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial
+
+Basic requirements are:
+
+You need to use WebGL to brighten up the selected area. For the math involving brightness, you can refer to this GLSL shader https://github.com/spite/Wagner/blob/master/fragment-shaders/brightness-contrast-fs.glsl
+Your lasso selection tool needs to automatically confirm a complete path or reject an incomplete path on mouse up.
+From the user perspective, the lasso tool can be used on a pre-loaded image and the brightened area of the image need to precisely align with the area selected by the lasso tool.
+Good to have (not required):
+
+Instead of a pre-loaded image, have a load image button to load a custom user image.
+Have a slider to adjust the intensity of the brighten effect.
+Have a reset button to rest the brighten effect.
+When you're done with the assignment, send your answers / code as an archive to derek@polarr.co and borui@polarr.co. Please make sure your package.json has all the modules necessary to build your assignment, as well as the npm and node version you're using. In additional package.json, please document all the necessary steps to run your project on a Linux or macOS or Windows 10 machine.
+
+In the meantime, let us know if you have any questions.

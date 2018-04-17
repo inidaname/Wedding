@@ -1,0 +1,341 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.mainBD {
+  background-image: url("../images/front.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .mainBD {
+    background-image: url("../images/mfront.jpg");
+  }
+}
+
+.secBD {
+  background-image: url("../images/sec.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .secBD {
+    background-image: url("../images/mvie.jpg");
+  }
+}
+
+.gBD {
+  background-image: url("../images/per.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .gBD {
+    background-image: url("../images/mper.png");
+  }
+}
+
+.bBD {
+  background-image: url("../images/thebri.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .bBD {
+    background-image: url("../images/bride.jpg");
+  }
+}
+
+.wBD {
+  background-image: url("../images/theWe.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .wBD {
+    background-image: url("../images/mWe.jpg");
+  }
+}
+
+.bgover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.aBgO {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+}
+
+.nBgO {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.activeTB {
+  font-weight: bolder !important;
+}
+
+.btmenu {
+  position: absolute;
+  bottom: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 35px;
+}
+
+.btmenu .mDis li {
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.btmenu .mDis .closebtn {
+  display: none;
+}
+
+.btmenu .mDis .openbtn {
+  display: none;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .btmenu .mDis {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0%;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px -5px 2px 2px rgba(0, 0, 0, 0.4);
+    padding-top: 15px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .btmenu .mDis .sos {
+    position: absolute;
+    margin-left: 50px;
+    top: 50px;
+    right: 9px;
+    z-index: 1;
+    padding: 8px 8px 90px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .btmenu .mDis .sos li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .btmenu .mDis .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    display: block;
+  }
+  .btmenu .mDis .openbtn {
+    position: fixed;
+    bottom: 55px;
+    z-index: -1;
+    left: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    margin-left: 10px;
+    display: block;
+  }
+  .btmenu .doThis {
+    width: 50% !important;
+    position: absolute;
+    right: 0;
+    margin-top: 5px !important;
+    padding-top: 5px !important;
+  }
+}
+
+.flashes {
+  position: absolute;
+  display: none;
+  width: 350px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  z-index: 1;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .flashes {
+    width: 250px;
+    height: 90px;
+    font-size: 12px;
+    padding: 10px !important;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 399px) {
+  .flashes {
+    width: 260px;
+    height: 90px;
+    font-size: 12px;
+    padding: 10px !important;
+  }
+}
+
+.flashes[id="theFirst"] {
+  top: 20px;
+  left: 35px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .flashes[id="theFirst"] {
+    display: none !important;
+  }
+}
+
+.flashes[id="theSecond"] {
+  bottom: 125px;
+  right: 35px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .flashes[id="theSecond"] {
+    bottom: 225px;
+    right: 25px;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 399px) {
+  .flashes[id="theSecond"] {
+    right: 10px;
+    width: 200px !important;
+  }
+}
+
+.flashes[id="theThird"] {
+  top: 85px;
+  right: 35px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .flashes[id="theThird"] {
+    top: 120px;
+    left: 25px;
+  }
+}
+
+.wedDate {
+  position: absolute;
+  bottom: 20%;
+}
+
+.wedDate p {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .wedDate p {
+    width: 80% !important;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .wedDate {
+    top: 20px;
+  }
+}
+
+.bigPart {
+  position: absolute;
+  bottom: 20%;
+  left: 25%;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .bigPart {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 80% !important;
+  }
+}
+
+.theGr {
+  position: absolute;
+  width: 40%;
+  top: 20%;
+  right: 5%;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .theGr {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 80% !important;
+  }
+}
+
+.theBr {
+  position: absolute;
+  width: 40%;
+  top: 20%;
+  left: 5%;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.theBr form {
+  padding: 15px !important;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .theBr {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 80% !important;
+  }
+  .theBr form {
+    width: 80%;
+    margin: auto;
+    padding: 0px !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
