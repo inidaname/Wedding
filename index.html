@@ -86,25 +86,25 @@
       </div>
 
       <div class="d-none mainView" id="theGuest">
-        <div class="theBr h-auto m-auto p-2">
-          <h5 class="text-center w-100">Guest Board <br> <small>Say something</small></h5>
+        <div class="theBr h-auto m-auto p-1">
+          <h5 class="text-center w-100">RSVP <br> <small>HOPE YOU CAN MAKE IT!</small></h5>
           <form class="needs-validation" id="theForm" method="POST" novalidate>
               <div class="form-row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-1">
                   <label for="fullname">Name</label>
                   <input type="text" class="form-control form-control-sm" id="fullname" name="fullname" placeholder="Love to tell our Kids" required>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-1">
                   <label for="email">Email</label>
                   <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Would like to say thank you">
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-1">
                     <label for="phone">Phone Number</label>
                     <input type="tel" class="form-control form-control-sm" name="phone" id="phone" placeholder="Not Important">
                   </div>
                 </div>
-                <div class="form-row">
-                  <div class="col-md-8 mb-3">
+                <!-- <div class="form-row">
+                  <div class="col-md-8 mb-1">
                       <div class="form-check form-check-inline">
                           <label class="form-check-label">Friends with</label>
                       </div>  
@@ -121,14 +121,14 @@
                         <label class="form-check-label" for="inlineRadio3">Both</label>
                       </div>
                   </div>
-                </div>
+                </div> -->
               <div class="form-row">
-                <div class="col-md-8 mb-3">
+                <div class="col-md-8 mb-1">
                   <label for="message">Little Message</label>
                   <textarea class="form-control form-control-sm" name="message" id="message" rows="3" placeholder="Most times even a silence means a lot"></textarea>
                 </div>
               </div>
-              <button class="btn btn-primary" onclick="subMitTO()">Submit form</button>
+              <button class="btn btn-primary" onclick="subMitTO()">Respond</button>
             </form>
         </div>
       </div>
@@ -139,11 +139,11 @@
               <a href="javascript:void(0)" class="openbtn" id="openbtn" onclick="openNav()">Menu</a>
             <div id="sos" class="sos d-none d-lg-flex d-md-flex flex-column-reverse align-self-stretch flex-lg-row flex-md-row list-unstyled align-items-start align-items-lg-center align-items-md-center justify-content-start justify-content-md-around justify-content-lg-around">
               <li id="home" class="theActive text-black-50 font-weight-bold">Home</a>
-              <li id="couples">Hassan and Saratu</li>
-              <li id="groom">Hassan</li>
-              <li id="bride">Saratu</li>
+              <li id="couples">The Couples</li>
+              <li id="groom">The Groom</li>
+              <li id="bride">The Bride</li>
               <li id="wedding">The Wedding</li>
-              <li id="guest">Guest Tab</li>
+              <li id="guest">RSVP</li>
             </div>
           </div>
           <div class="w-25 d-flex pr-5 doThis justify-content-end"><h6 id="count"></h6></div>
