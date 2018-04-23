@@ -290,10 +290,33 @@ document.onreadystatechange = function () {
       formData.phone = phone.value
       formData.message = message.value
       postAjax('https://wedapi.adp.ng/postMessages', formData, function(data){
-          formSpace.innerHTML = '<p class="text-center">Thank You</p> <p class="w-100 text-center"><i class="fas fa-facebook-f fa-sm "></i><i class="fas fa-twitter fa-sm"></i></p>';
+          formSpace.innerHTML = '<p class="text-center">Thank You, May be we should tell more people.</p> <p class="w-100 text-center"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hassanandsaratu.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fab fa-facebook-f fa-lg m-3"></i></a>&nbsp;&nbsp; <a href="https://twitter.com/intent/tweet?text=Say%20Something&url=https%3A%2F%2Fwww.hassanandsaratu.com%2F&hashtag=love,developer,wedding&via=inidaname"><i class="fab fa-twitter fa-lg m-3"></i></a></p>';
+
+          if (formData.email) {
+            var mailData = {
+              email: formData.email,
+              fullname: formData.fullname
+            }
+            postAjax('https://wedapi.adp.ng/sendMail', mailData, function(data){
+              console.log(data)
+            })
+          }
+
+          if (formData.phone) {
+            var aname = formData.name;
+            aname = aname.split(' ')[0]
+            var owneremail = 'saniyhassan@gmail.com';
+            var subacct = 'THEBRIDGE';
+            var subacctpwd = 'thebridges';
+            var senderNum = 'Has And Sar';
+            var SMSmes = 'Thank You '+aname+' \n It means so much to us that you are  part of this special day in our lives, we will forever cherish this. \n Hassan and Saratu';
+            getAjax('http://www.smslive247.com/http/index.aspx?cmd=sendquickmsg&owneremail='+owneremail+'&subacct='+subacct+'&subacctpwd='+subacctpwd+'&message='+SMSmes+'&sender='+senderNum+'&sendto='+formData.phone+'&msgtype=0', function(data) {
+              console.log(data);
+            });
+
+          }
       });
     })
-
 
     //sending http request
     function postAjax(url, data, success) {
@@ -312,6 +335,20 @@ document.onreadystatechange = function () {
       return xhr;
   }
   
+
+  function getAjax(url, success) {
+    var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+    xhr.open('GET', url);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState>3 && xhr.status==200) success(xhr.responseText);
+    };
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.send();
+    return xhr;
+  }
+
+// example request
+// getAjax('http://foo.bar/?p1=1&p2=Hello+World', function(data){ console.log(data); });
   // example request
   // postAjax('http://localhost:8888/postMessages', 'p1=1&p2=Hello+World', function(data){ console.log(data); });
   
