@@ -240,6 +240,31 @@ document.onreadystatechange = function () {
       }
     });
 
+    // when click the couples tabbed
+    let fromTab = document.getElementById('fromTab');
+    fromTab.addEventListener('click', function (event) {
+      if (!this.classList.contains('theActive')) {
+        mnOver.className = "nBgO h-100 w-100";
+        theBody.className = 'wBD';
+        checkMenu()
+        this.classList.add('theActive');
+        this.classList.add('text-black-50');
+        this.classList.add('font-weight-bold');
+  
+        setMainView()
+        let guestPG = document.getElementById('theGuest');
+        guestPG.classList.add('theActive');
+        guestPG.classList.remove('d-none');
+        guestPG.classList.add('d-block');
+        if (document.getElementById('sos').classList.contains('inMobile')) {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById('sos').classList.remove('d-flex')
+          document.getElementById('sos').classList.add('d-none')
+          document.getElementById('openbtn').style.display = 'block'
+        }
+      }
+    });
+
     let formData = {};
     let fullName = document.getElementById('fullname');
     let email = document.getElementById('email');
