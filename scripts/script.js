@@ -290,8 +290,6 @@ document.onreadystatechange = function () {
       formData.phone = phone.value
       formData.message = message.value
       postAjax('http://localhost:8888/postMessages', formData, function(data){
-        console.log(data);
-        
         if (data.message == 'success') {
           formSpace.innerHTML = 'Thank You';
         }
