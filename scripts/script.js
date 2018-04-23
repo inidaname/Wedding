@@ -284,17 +284,13 @@ document.onreadystatechange = function () {
     formThings.addEventListener('submit', function (event) {
       event.preventDefault()
       let formSpace = document.getElementById('theForm')
-      formSpace.innerHTML = "<p>We are sending your message to the Couples</p>";
+      formSpace.innerHTML = "<p class='text-center'>We are sending your message to the Couples</p>";
       formData.name = fullName.value
       formData.email = email.value
       formData.phone = phone.value
       formData.message = message.value
       postAjax('https://wedapi.adp.ng/postMessages', formData, function(data){
-        console.log(data);
-        
-        if (data === 'Success') {
-          formSpace.innerHTML = '<p>Thank You</p>';
-        }
+          formSpace.innerHTML = '<p class="text-center">Thank You</p> <p class="w-100 text-center"><i class="fas fa-facebook-f fa-sm "></i><i class="fas fa-twitter fa-sm"></i></p>';
       });
     })
 
