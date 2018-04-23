@@ -289,7 +289,7 @@ document.onreadystatechange = function () {
       formData.email = email.value
       formData.phone = phone.value
       formData.message = message.value
-      postAjax('http://localhost:8888/postMessages', formData, function(data){
+      postAjax('http://192.169.231.145:8686/postMessages', formData, function(data){
         if (data.message == 'success') {
           formSpace.innerHTML = 'Thank You';
         }
