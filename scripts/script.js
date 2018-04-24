@@ -295,7 +295,7 @@ document.onreadystatechange = function () {
           if (formData.email) {
             var mailData = {
               email: formData.email,
-              fullname: formData.fullname
+              fullname: formData.name
             }
             postAjax('https://wedapi.adp.ng/sendMail', mailData, function(data){
               console.log(data)
@@ -309,7 +309,7 @@ document.onreadystatechange = function () {
             var subacct = 'THEBRIDGE';
             var subacctpwd = 'thebridges';
             var senderNum = 'Has And Sar';
-            var SMSmes = 'Thank You '+aname+' \n It means so much to us that you are  part of this special day in our lives, we will forever cherish this. \n Hassan and Saratu';
+            var SMSmes = 'Thank You '+aname+' \n It means so much to us that you are  part of this special day in our lives, we will forever cherish this. \n \n from Hassan and Saratu';
             getAjax('http://www.smslive247.com/http/index.aspx?cmd=sendquickmsg&owneremail='+owneremail+'&subacct='+subacct+'&subacctpwd='+subacctpwd+'&message='+SMSmes+'&sender='+senderNum+'&sendto='+formData.phone+'&msgtype=0', function(data) {
               console.log(data);
             });
