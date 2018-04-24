@@ -13,46 +13,46 @@ html{
 }
 
 .mainBD{
-    background-image: url('../images/front.jpg');
+    background-image: url('https://res.cloudinary.com/inidaname/image/upload/ar_4:3,c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445434/mywedding/front.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100vh;
     @include mQ('200px', '800px'){
-        background-image: url('../images/mfront.jpg');
+        background-image: url('https://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445453/mywedding/mfront.jpg');
     }
 }
 .secBD{
-    background-image: url('../images/sec.jpg');
+    background-image: url('https://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445435/mywedding/sec.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100vh;
     @include mQ('200px', '800px'){
-        background-image: url('../images/mvie.jpg');
+        background-image: url('https://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445454/mywedding/mvie.jpg');
     }
 }
 
 .gBD{
-    background-image: url('../images/per.jpg');
+    background-image: url('https://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445444/mywedding/per.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100vh;
     @include mQ('200px', '800px'){
-        background-image: url('../images/mper.png');
+        background-image: url('https://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445455/mywedding/mper.jpg');
     }
 }
 
 .bBD{
-    background-image: url('../images/thebri.jpg');
+    background-image: url('https://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445446/mywedding/thebri.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100vh;
     @include mQ('200px', '800px'){
-        background-image: url('../images/bride.jpg');
+        background-image: url('https://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445444/mywedding/bride.jpg');
     }
 }
 
 .wBD{
-    background-image: url('../images/theWe.png');
+    background-image: url('http://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445459/mywedding/theWe.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100vh;
     @include mQ('200px', '800px'){
-        background-image: url('../images/mWe.jpg');
+        background-image: url('https://res.cloudinary.com/inidaname/image/upload/c_fill/c_scale,w_auto,e_improve,e_displace,dpr_auto/v1524445459/mywedding/mWe.jpg');
     }
 }
 

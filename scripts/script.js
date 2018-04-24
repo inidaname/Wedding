@@ -310,7 +310,7 @@ document.onreadystatechange = function () {
             var subacctpwd = 'thebridges';
             var senderNum = 'Has And Sar';
             var SMSmes = 'Thank You '+aname+' \n It means so much to us that you are  part of this special day in our lives, we will forever cherish this. \n Hassan and Saratu';
-            getAjax('http://www.smslive247.com/http/index.aspx?cmd=sendquickmsg&owneremail='+owneremail+'&subacct='+subacct+'&subacctpwd='+subacctpwd+'&message='+SMSmes+'&sender='+senderNum+'&sendto='+formData.phone+'&msgtype=0', function(data) {
+            getAjax('https://www.smslive247.com/http/index.aspx?cmd=sendquickmsg&owneremail='+owneremail+'&subacct='+subacct+'&subacctpwd='+subacctpwd+'&message='+SMSmes+'&sender='+senderNum+'&sendto='+formData.phone+'&msgtype=0', function(data) {
               console.log(data);
             });
 
